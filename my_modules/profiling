@@ -1,0 +1,2 @@
+python -m cProfile -o module_c.profile module_c.py
+python -m pstats module_c.profile

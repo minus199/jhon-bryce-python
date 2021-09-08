@@ -1,10 +1,10 @@
 import sys
-sys.path.append("./my_modules")
-import my_modules
+sys.path.append("./modules")
+import modules
 
-# my_modules.nested_modules.module_b
+# modules.nested_modules.module_b
 
-# my_modules.new_variable
+# modules.new_variable
 """
 This is some description
 
@@ -16,5 +16,5 @@ if __name__ == "__main__":
     # import doctest
     # doctest.testmod()
 
-    person = my_modules.new_person("fred", 20)
-    my_modules.stuff_doer.do_stuff_with_person(person)
+    person = modules.new_person("fred", 20)
+    modules.stuff_doer.do_stuff_with_person(person)

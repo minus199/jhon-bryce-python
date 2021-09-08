@@ -13,3 +13,7 @@ def warning_handling():
     print("Success")
     sys.stderr.write("Some error occured")
     print("Finished")
+
+
+if __name__ == '__main__':
+    warning_handling()

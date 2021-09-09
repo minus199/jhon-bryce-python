@@ -6,7 +6,6 @@ class Account:
         self.__balance = initial_balance
         Account.__numCreated += 1
         self.__id = Account.__numCreated
-
     def deposit(self, amt):
         self.__balance = self.__balance + amt
         return self.balance
@@ -27,17 +26,22 @@ class Account:
         pass
 
     # (+) plus operator overloading
-    def __add__(self, other):
-        return self.balance + other.balance
+    # def __add__(self, other):
+    #     return self.balance + other.balance
+
+    def __lt__(self, other):
+        return self.balance < other.balance
 
     def __str__(self):
         return f'Account {self.__id} [current amount {self.balance}]'
 
+    def __repr__(self):
+        return f'{self.account_type.title()} Account - Id: {self.__id} [current amount {self.balance}]'
     @classmethod
     def get_num_accounts(cls):
         return cls.__numCreated
-
-
+x = Account(1)
+print()
 class BusinessAccount(Account):
     def transfer(self, account):
         account.deposit(self.balance)
